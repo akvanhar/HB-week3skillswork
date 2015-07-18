@@ -1,0 +1,23 @@
+input {
+	background-color: yellow;
+}
+
+#lastname {
+	font-weight: bold;
+}
+
+div {
+	border: 2px solid black;
+	border-radius: 25px;
+	width: 500px;
+}
+
+label input {
+	margin: 3px;
+}
+
+div p {
+	text-align: center;
+	margin: 5px;
+	vertical-align: middle;
+}
