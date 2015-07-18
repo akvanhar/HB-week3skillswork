@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Application Form</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		</style>
-	</head>
-	<body>
+{% extends 'base.html' %}
+	{% block title %}Application Form{% endblock %}
+	{% block content %}
 		<h1>Application Form</h1>
 		<div>
 			<p> Please fill out all of the fields to apply for the position of your choice.</p>
@@ -25,14 +20,13 @@
 			<br>
 			<label>Select a job to apply for:
 				<select name='jobtype'>
-					<option value='softwareEngineer'>Software Engineer</option>
-					<option value='qaEngineer'>QA Engineer</option>
-					<option value-'productManager'>Product Manager</option>
+					<option value='Software Engineer'>Software Engineer</option>
+					<option value='QA Engineer'>QA Engineer</option>
+					<option value-'Product Manager'>Product Manager</option>
 				</select>
 			</label>
 			<br>
 			<br>
 			<input type='submit'>
 		</form>
-	</body>
-</html>
+	{% endblock %}

@@ -22,7 +22,6 @@ div p {
 	vertical-align: middle;
 }
 
-div p:#acknowledge {
-	padding: 20px;
-	color: red;
+#acknowledge {
+	padding: 10px;
 }

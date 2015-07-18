@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}We Acknowledge Your Application
+{% endblock %}
+{% block content %}
+	<div>
+		<p id='acknowledge'>Thank you, {{ firstname }} {{ lastname }}, for applying to be a {{ jobchoice }}. 
+			<br>Your minimum salary requirement is {{ salary }} dollars.
+		</p>
+	</div>
+{% endblock %}
