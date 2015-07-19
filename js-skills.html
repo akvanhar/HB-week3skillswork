@@ -98,6 +98,12 @@
 
 <script>
   // code here for above problem
+  var button = document.getElementById('popup-alert-button');
+  function alertClick() {
+    alert('Click-ity-click!');
+  }
+  button.addEventListener('click', alertClick);
+
 </script>
 
 
@@ -116,6 +122,14 @@
 
 <script>
   // code here for above-problem
+  message = document.getElementById('message-to-change');
+  var messageButton = document.getElementById('change-hello-to-goodbye-button');
+  function changeMessage(evt) {
+    console.log(evt);
+    message.textContent = 'goodbye'
+  }
+  messageButton.addEventListener('click', changeMessage)
+
 </script>
 
 <div class="hint">
@@ -145,6 +159,15 @@
 
 <script>
   // code here for above problem
+  var submitForm = document.getElementById('prevent-form-submission-form')
+  var submitButton = document.getElementById('prevent-form-submission-button')
+  function noSubmit(evt) {
+    evt.preventDefault()
+    alert("Don't submit this!")
+    return false;
+  }
+  submitButton.addEventListener('click', noSubmit);
+
 </script>
 
 <div class="hint">
@@ -174,24 +197,20 @@
 </fieldset>
 
 <script>
-//  Here's a stub of a function you can use!
+ function reverseString() {
+   var msg = "Porcupines are cute";
+   var newMsg = "";
 
-//  function reverseString() {
-//    var msg = "Porcupines are cute";
-//
-//    // do some stuff here to reverse that string into a new variable
-//    var newMsg = "This should be the reversed string";
-//
-//    alert(newMsg);
-//  }
+   for (i = msg.length-1; i >= 0; i--) {
+      newMsg += msg[i];
+   }
+   
+   alert(newMsg);
+ }
 
-// Here's a stub of event stuff you could use
-//
-
-//  var button = document.getElementById('reverse-string-button');
-//  button.addEventListener('click', reverseString);
+ var button = document.getElementById('reverse-string-button');
+ button.addEventListener('click', reverseString);
 </script>
-
 
 
 
@@ -200,8 +219,7 @@
 <h2>jQuery</h2>
 <p>You should use jQuery for these parts.</p>
 <p>We didn't include jQuery in this document, though&mdash;so your first task is to include it!</p>
-
-
+<script src="http://code.jquery.com/jquery.js"></script>
 
 <h3>Finding the Button</h3>
 <p>
@@ -214,6 +232,11 @@
 
 <script>
   // code here for above problem
+  function alertButton() {
+    alert('POP!');
+  }
+  classList = $(".tricky-to-find");
+  classList.on('click', alertButton);
 </script>
 
 <div class="hint">
@@ -241,6 +264,11 @@
 
 <script>
   // put your code here
+  function catToDog() {
+    catImg.attr('src', 'https://s-media-cache-ak0.pinimg.com/236x/13/af/74/13af74761702f46c3a6bc5482d1fb831.jpg');
+  }
+  catImg = $('#kittenz-rule');
+  catImg.on('click', catToDog);
 </script>
 
 <div class="hint">
@@ -274,6 +302,11 @@
 
 <script>
   // put your code here
+  function appearPorcupine() {
+    setTimeout( function() {$('#cute-porcupine-image').fadeIn(2000);}, 1000);
+  }
+  $('#make-a-porcupine').on('click', appearPorcupine);
+
 </script>
 
 <div class="hint">
@@ -306,6 +339,18 @@
 
 <script>
   // put your code here
+
+var agreeableForm = $('#agreeable-form');
+function noFormSubmit(evt) {
+  evt.preventDefault();
+  $('#agreeable-text').text("I like " + $('#favorite-food-input').val() + " too.");
+  return false;
+}
+agreeableForm.on('submit', noFormSubmit);
+
+
+
+
 </script>
 
 <div class="hint">
@@ -441,10 +486,6 @@
   CSS, take a look at the CSS we use on this page&mdash;it shows off some interesting pseudo-selectors
   like <code>:before</code> and uses things like CSS numbering. Neat stuff.
 </p>
-
-
-
-
 
 <script>
   // Blink text FTW!
